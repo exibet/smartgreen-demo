@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.example-card {
+  max-width: 300px;
+  margin: 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin md-icon-size($size: 24px) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+}
+
+.mat-icon {
+  @include md-icon-size(50px);
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 100px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+}

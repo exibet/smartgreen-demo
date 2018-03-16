@@ -1,0 +1,45 @@
+<div *ngIf="site">
+
+  <mat-toolbar class="toolbar">
+    <h1>Site overview: {{site.site}}</h1>
+  </mat-toolbar>
+
+  <div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="equip_name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.equip_name}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="lastUpdate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Last Update </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.lastUpdate}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Time </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.time | date: 'yyyy-MM-dd HH:MM'}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="S3avg">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> S3 Avg </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.S3avg}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="S4avg">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> S4 Avg </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.S4avg}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="TempAvg">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Temp Avg </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.TempAvg}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectEquipment(row)"></mat-row>
+    </mat-table>
+  </div>
+
+</div>

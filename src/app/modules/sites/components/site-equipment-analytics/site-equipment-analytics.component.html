@@ -1,0 +1,15 @@
+<mat-toolbar class="toolbar">
+  <h1>Site: <a [routerLink]="'/sites/' + routeParams.site">{{routeParams.site}}</a> - Equipment: {{routeParams.equipName}}</h1>
+  <button (click)="createData()" mat-mini-fab color="warn">
+    <mat-icon>refresh</mat-icon>
+  </button>
+</mat-toolbar>
+
+<fusioncharts
+  [id]="id"
+  [width]="width"
+  [height]="height"
+  [type]="type"
+  [dataFormat]="dataFormat"
+  [dataSource]="dataSource"
+></fusioncharts>

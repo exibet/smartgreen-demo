@@ -1,0 +1,8 @@
+{
+  "/fed/*": {
+    "target": "http://www.smartgreen.co.il",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

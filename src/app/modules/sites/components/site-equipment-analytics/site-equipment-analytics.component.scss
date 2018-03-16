@@ -1,0 +1,12 @@
+:host {
+  /deep/ {
+    .raphael-group-3-creditgroup {
+      display: none;
+    }
+  }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
