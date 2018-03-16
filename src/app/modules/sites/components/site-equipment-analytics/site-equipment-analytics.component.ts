@@ -45,8 +45,6 @@ export class SiteEquipmentAnalyticsComponent implements OnInit {
         };
       })
     };
-
-    console.log(this.dataSource);
   }
 
 }

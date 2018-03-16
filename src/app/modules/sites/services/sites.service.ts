@@ -28,7 +28,7 @@ export class SitesService {
   }
 
   getSites() {
-    return this.http.get<SiteI[]>('/fed/sitesdata.json').pipe(
+    return this.http.get<SiteI[]>('/assets/json.json').pipe(
       map((sites: SiteI[]) => {
         sites.map((site: SiteI) => this.sitesMap[site.site] = site);
 
